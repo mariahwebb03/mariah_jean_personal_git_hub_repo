@@ -1,5 +1,5 @@
 ---
-title: "mariah_jean_personal_git_hub_repo"
+title: "Mariah Jean"
 ---
 
 This is a Quarto website.
