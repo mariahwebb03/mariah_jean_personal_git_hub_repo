@@ -1,1 +1,183 @@
 /* css styles */
+/* =====================================================================
+   Mariah Webb — personal portfolio styles
+   ---------------------------------------------------------------------
+   HOW THIS WORKS
+   - All colors are CSS variables. The :root block below is the PARCHMENT
+     default (your DS350 look). Every rule references the variables, so a
+     "theme" is just a different set of variable values.
+   - A page opts into a different theme by adding one line to its YAML:
+         body-classes: theme-navy      (or theme-dark)
+     Pages with no body-class (like index.qmd) get the parchment default.
+   - To add a NEW theme later: copy a body.theme-* block, rename the class,
+     change the values. Nothing else in this file needs to change.
+   ===================================================================== */
+
+
+/* ── PARCHMENT (default) — applied to every page unless overridden ── */
+:root {
+  --bg:             #FBF6EE;  /* page background                    */
+  --surface:        #FFFFFF;  /* figure / graph card interior       */
+  --surface-border: #E2D0BC;  /* card + panel border                */
+  --text:           #2E1A0E;  /* body text                          */
+  --text-mid:       #6B4226;  /* secondary text, TOC                */
+  --text-light:     #9E6B45;  /* captions, line numbers             */
+  --heading:        #B5722A;  /* h1 + your name                     */
+  --heading-sub:    #6B4226;  /* h2–h4                              */
+  --link:           #B5722A;
+  --link-hover:     #8B5520;
+  --border:         #E2D0BC;
+  --code-bg:        #F5E8D4;
+  --code-text:      #2E1A0E;
+  --accent:         #B5722A;  /* blockquote bar, underlines         */
+}
+
+
+/* ── NAVY & BRASS — body-classes: theme-navy ── */
+body.theme-navy {
+  --bg:             #FAF9F5;
+  --surface:        #FFFFFF;
+  --surface-border: #E4E0D6;
+  --text:           #2E3742;
+  --text-mid:       #3E4A57;
+  --text-light:     #6B7480;
+  --heading:        #23374D;
+  --heading-sub:    #2E3742;
+  --link:           #8A6A2F;  /* darkened brass so links pass contrast */
+  --link-hover:     #6E521F;
+  --border:         #E4E0D6;
+  --code-bg:        #F1EEE7;
+  --code-text:      #2E3742;
+  --accent:         #B08D57;  /* brass */
+}
+
+
+/* ── WARM DARK — body-classes: theme-dark ──
+   Best for graph-heavy pages (ggplot / maps). See the note at the bottom
+   about interactive widgets and code highlighting on dark pages. */
+body.theme-dark {
+  --bg:             #201C18;
+  --surface:        #2B2622;
+  --surface-border: #3A342E;
+  --text:           #EDE3D3;
+  --text-mid:       #C6B79E;
+  --text-light:     #9E9079;
+  --heading:        #E0A15C;
+  --heading-sub:    #D9C7AC;
+  --link:           #E0A15C;
+  --link-hover:     #EBC79A;
+  --border:         #3A342E;
+  --code-bg:        #2B2622;
+  --code-text:      #EDE3D3;
+  --accent:         #E0A15C;
+}
+
+
+/* =====================================================================
+   BASE RULES — reference variables only, never hard-coded colors
+   ===================================================================== */
+
+body {
+  background-color: var(--bg) !important;
+  color: var(--text);
+}
+
+h1, h2, h3, h4 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+}
+h1                 { color: var(--heading); }
+h2, h3, h4         { color: var(--heading-sub); }
+
+a                  { color: var(--link); }
+a:hover            { color: var(--link-hover); }
+
+#TOC a             { color: var(--text-mid); }
+#TOC a:hover       { color: var(--link); }
+#TOC .active       { color: var(--link) !important; }
+
+
+/* ── Figure / graph cards ──
+   Wraps rendered output from code chunks (ggplots, tables, htmlwidgets)
+   so a light graph never floats awkwardly on a colored page. Because
+   --surface matches each theme's ggplot plot.background, your plots sit
+   flush inside the card and the border does the framing. */
+.cell-output-display {
+  background: var(--surface);
+  border: 0.5px solid var(--surface-border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+.cell-output-display .figure-caption,
+.cell-output-display figcaption {
+  color: var(--text-light);
+}
+
+/* Optional manual card: wrap anything in ::: {.figure-card} ... ::: */
+.figure-card {
+  background: var(--surface);
+  border: 0.5px solid var(--surface-border);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+
+/* ── Code chunks — single warm surface, no outer border ── */
+div.sourceCode {
+  background-color: var(--code-bg) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+pre.sourceCode {
+  background-color: var(--code-bg) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  margin: 0 !important;
+}
+pre.sourceCode code {
+  background-color: var(--code-bg) !important;
+}
+
+/* Line numbers — same surface as code, no gray gutter */
+pre.numberSource {
+  background-color: var(--code-bg) !important;
+}
+pre.numberSource code > span > a:first-child::before {
+  color: var(--text-light) !important;
+  border-right: none !important;
+  background-color: var(--code-bg) !important;
+}
+.sourceCode .line-numbers,
+td.line-numbers,
+.code-with-line-numbers .sourceCode,
+td.code-with-line-numbers {
+  background-color: var(--code-bg) !important;
+  border-right: none !important;
+}
+
+/* Inline code */
+code {
+  background-color: var(--code-bg) !important;
+  color: var(--code-text) !important;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 3px solid var(--accent);
+  background: var(--code-bg);
+  color: var(--text);
+  padding: 10px 16px;
+  border-radius: 0 6px 6px 0;
+}
+
+
+/* ── Navbar utility (kept from your DS350 site) ── */
+.navbar .dropdown-menu {
+  max-height: 70vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

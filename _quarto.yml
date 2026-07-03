@@ -1,13 +1,17 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: "mariah_jean_personal_git_hub_repo"
+  title: "Mariah Webb"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
+      - href: resume.qmd
+        text: Résumé
 
 format:
   html:
@@ -15,5 +19,4 @@ format:
     css: styles.css
     toc: true
 
-editor: visual
-
+editor: source
