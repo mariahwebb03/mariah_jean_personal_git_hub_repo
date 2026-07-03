@@ -203,6 +203,8 @@ blockquote {
   border-bottom: 1.5px solid var(--surface-border);
   padding-bottom: 4px;
   margin: 1.4rem 0 .7rem;
+  font-weight: 600;
+  font-family: systm-ui, sans-serif;
 }
 .resume-entry { margin-bottom: .9rem; }
 .resume-head {
