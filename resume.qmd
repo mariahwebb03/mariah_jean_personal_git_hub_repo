@@ -1,0 +1,118 @@
+---
+pagetitle: "Mariah J. Webb — Résumé"
+toc: false
+---
+
+::: {.resume}
+
+<header class="resume-header">
+<h1 class="resume-name">Mariah J. Webb</h1>
+<p class="resume-contact">
+<a href="mailto:mariahwebb03@gmail.com">mariahwebb03@gmail.com</a>
+&nbsp;·&nbsp;
+<a href="https://www.linkedin.com/in/mariah-webb/">linkedin.com/in/mariah-webb</a>
+</p>
+</header>
+
+<!-- To add your phone number back, put it inside the contact line above, e.g.:
+     &nbsp;·&nbsp; 208.240.5670   -->
+
+<!-- Optional download button. Add a resume.pdf to your repo, then uncomment:
+[Download PDF](resume.pdf){.resume-download} -->
+
+<h2 class="resume-section">Education</h2>
+
+<div class="resume-entry">
+<div class="resume-head">
+<span><span class="resume-title">B.S. Psychology</span>&nbsp; <span class="resume-org">Brigham Young University–Idaho</span></span>
+<span class="resume-meta">Rexburg, ID · 2021 – 2026 (expected)</span>
+</div>
+<ul>
+<li>Full-tuition academic scholarship, 2021–2026</li>
+</ul>
+</div>
+
+<h2 class="resume-section">Skills</h2>
+
+<!-- TODO: confirm or trim these — only claim what you're comfortable with. -->
+<div class="resume-skills">
+<b>Languages &amp; tools:</b> R, SQL, Git &amp; GitHub, Quarto<br>
+<b>Data:</b> wrangling (dplyr), importing &amp; tidying, joins, ggplot2 visualization, interactive charts (dygraphs)
+</div>
+
+<h2 class="resume-section">Experience</h2>
+
+<div class="resume-entry">
+<div class="resume-head">
+<span><span class="resume-title">Academic Advisor</span>&nbsp; <span class="resume-org">Brigham Young University–Idaho</span></span>
+<span class="resume-meta">Rexburg, ID · Dec 2024 – Present</span>
+</div>
+<ul>
+<li>Guided dozens of students in academic planning and orientation to BYU-Idaho resources and campus life</li>
+<li>Advised 12 students each week in exploring career goals and selecting majors</li>
+<li>Monitored student progress across 20 majors to ensure timely completion of graduation requirements</li>
+</ul>
+</div>
+
+<div class="resume-entry">
+<div class="resume-head">
+<span><span class="resume-title">FSY Youth Counselor</span>&nbsp; <span class="resume-org">Brigham Young University</span></span>
+<span class="resume-meta">Various campuses</span>
+</div>
+<ul>
+<li>Provided full-time support to youth groups of up to 30 individuals</li>
+<li>Collaborated with a co-counselor with minimal supervision for 7 days</li>
+<li>Taught both formally and informally in a group setting 3–5 times each day</li>
+</ul>
+</div>
+
+<div class="resume-entry">
+<div class="resume-head">
+<span><span class="resume-title">Cashier &amp; Chocolatier</span>&nbsp; <span class="resume-org">Florence's Exquisite Candies</span></span>
+<span class="resume-meta">Rexburg, ID</span>
+</div>
+<ul>
+<li>Partnered with 20 coworkers to fulfill large and individual orders, contributing to repeat business</li>
+<li>Assembled dozens of high-quality chocolate boxes for shipping</li>
+<li>Delivered friendly, efficient service to over 50 customers daily, in person and by phone</li>
+</ul>
+</div>
+
+<h2 class="resume-section">Volunteer Experience</h2>
+
+<div class="resume-entry">
+<div class="resume-head">
+<span><span class="resume-title">Full-Time Missionary</span>&nbsp; <span class="resume-org">The Church of Jesus Christ of Latter-day Saints</span></span>
+<span class="resume-meta">Houston, TX · May 2022 – Nov 2023</span>
+</div>
+<ul>
+<li>Prepared and taught 30-minute lessons for dozens of individuals</li>
+<li>Built interpersonal skills with people of all ages and backgrounds across 6 locations</li>
+<li>Led 6 other missionaries in a leadership role for 5 months</li>
+</ul>
+</div>
+
+<div class="resume-entry">
+<div class="resume-head">
+<span><span class="resume-title">Accountability Mentor, THRIVE Program</span>&nbsp; <span class="resume-org">Brigham Young University–Idaho</span></span>
+<span class="resume-meta">Rexburg, ID · Jan 2022 – Apr 2022</span>
+</div>
+<ul>
+<li>Provided 5 hours of weekly support for groups of 8 dealing with anxiety and depression</li>
+<li>Guided individuals in creating and achieving 6-week goals</li>
+<li>Helped run meetings of 40 people learning coping skills</li>
+</ul>
+</div>
+
+<div class="resume-entry">
+<div class="resume-head">
+<span><span class="resume-title">Youth Leader</span>&nbsp; <span class="resume-org">The Church of Jesus Christ of Latter-day Saints</span></span>
+<span class="resume-meta">Rexburg, ID · Jan 2018 – Dec 2021</span>
+</div>
+<ul>
+<li>Planned weekly activities for up to 40 individuals ages 12–18</li>
+<li>Collaborated with 7 others to plan a 5-day youth camp to improve well-being</li>
+</ul>
+</div>
+
+:::
