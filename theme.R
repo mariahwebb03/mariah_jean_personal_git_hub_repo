@@ -8,17 +8,16 @@
 #   theme-navy           theme_navy()        scale_color_navy()      / _fill_
 #   theme-dark           theme_dark()        scale_color_dark()      / _fill_
 #
-# Each plot.background is set to that theme's CSS card color (--surface) so the
-# plot sits flush inside its figure card. Source this file at the top of a .qmd:
+# Source this file at the top of a .qmd:
 #   source("theme.R")          # from the project root
 #   source("../theme.R")       # from a week/project subfolder
 # ─────────────────────────────────────────────────────────────────────────────
 
 
 # ══ PARCHMENT (default) ══════════════════════════════════════════════════════
-# NOTE: plot.background here is WHITE (#FFFFFF) to match the white figure cards
-# on the personal site. (Your DS350 theme.R used #FBF6EE parchment margins — the
-# only intentional difference.)
+# NOTE: plot.background is WHITE (#FFFFFF) to match the white figure cards on the
+# personal site. (Your DS350 theme.R used #FBF6EE parchment margins — the only
+# intentional difference.)
 theme_parchment <- function() {
   theme_bw() +
     theme(

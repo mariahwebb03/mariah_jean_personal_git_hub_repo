@@ -1,11 +1,10 @@
-/* css styles */
 /* =====================================================================
    Mariah Webb — personal portfolio styles
    ---------------------------------------------------------------------
    HOW THIS WORKS
    - All colors are CSS variables. The :root block below is the PARCHMENT
-     default (your DS350 look). Every rule references the variables, so a
-     "theme" is just a different set of variable values.
+     default. Every rule references the variables, so a "theme" is just a
+     different set of variable values.
    - A page opts into a different theme by adding one line to its YAML:
          body-classes: theme-navy      (or theme-dark)
      Pages with no body-class (like index.qmd) get the parchment default.
@@ -53,8 +52,8 @@ body.theme-navy {
 
 
 /* ── WARM DARK — body-classes: theme-dark ──
-   Best for graph-heavy pages (ggplot / maps). See the note at the bottom
-   about interactive widgets and code highlighting on dark pages. */
+   Best for graph-heavy pages (ggplot / maps). Interactive widgets and code
+   highlighting need extra care on dark pages. */
 body.theme-dark {
   --bg:             #201C18;
   --surface:        #2B2622;
@@ -97,11 +96,7 @@ a:hover            { color: var(--link-hover); }
 #TOC .active       { color: var(--link) !important; }
 
 
-/* ── Figure / graph cards ──
-   Wraps rendered output from code chunks (ggplots, tables, htmlwidgets)
-   so a light graph never floats awkwardly on a colored page. Because
-   --surface matches each theme's ggplot plot.background, your plots sit
-   flush inside the card and the border does the framing. */
+/* ── Figure / graph cards ── */
 .cell-output-display {
   background: var(--surface);
   border: 0.5px solid var(--surface-border);
@@ -175,12 +170,13 @@ blockquote {
 }
 
 
-/* ── Navbar utility (kept from your DS350 site) ── */
+/* ── Navbar utility ── */
 .navbar .dropdown-menu {
   max-height: 70vh;
   overflow-y: auto;
   overflow-x: hidden;
 }
+
 
 /* ── Résumé page ── */
 .resume {
