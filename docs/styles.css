@@ -181,3 +181,60 @@ blockquote {
   overflow-y: auto;
   overflow-x: hidden;
 }
+
+/* ── Résumé page ── */
+.resume {
+  background: var(--surface);
+  border: 0.5px solid var(--surface-border);
+  border-radius: 12px;
+  max-width: 780px;
+  margin: 1.5rem auto;
+  padding: 2rem 2.5rem;
+}
+.resume-header { text-align: center; margin-bottom: 1.25rem; }
+.resume-name {
+  color: var(--heading);
+  font-family: Georgia, serif;
+  letter-spacing: .5px;
+  margin: 0;
+}
+.resume-contact { color: var(--text-mid); font-size: .85rem; margin: .4rem 0 0; }
+.resume-section {
+  color: var(--heading);
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-bottom: 1.5px solid var(--surface-border);
+  padding-bottom: 4px;
+  margin: 1.4rem 0 .7rem;
+}
+.resume-entry { margin-bottom: .9rem; }
+.resume-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.resume-title  { font-weight: bold; color: var(--text); }
+.resume-org    { font-style: italic; color: var(--text-mid); font-size: .92rem; }
+.resume-meta   { color: var(--text-light); font-size: .8rem; text-align: right; white-space: nowrap; }
+.resume ul     { margin: .3rem 0 0; padding-left: 1.15rem; }
+.resume li     { font-size: .9rem; line-height: 1.5; margin-bottom: 2px; }
+.resume-skills { font-size: .9rem; line-height: 1.7; }
+.resume-skills b { color: var(--text-mid); }
+.resume-download {
+  display: inline-block;
+  margin-top: .6rem;
+  padding: 6px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  color: var(--accent) !important;
+  text-decoration: none;
+}
+
+/* Clean printing: hide site chrome, drop the sheet border */
+@media print {
+  .navbar, #TOC, footer, .page-footer { display: none !important; }
+  body { background: #fff !important; }
+  .resume { border: none; max-width: none; margin: 0; padding: 0; }
+}
